@@ -118,12 +118,12 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        MOUSE {
+        layer_6 {
             bindings = <
-&none   &none   &none   &none     &none                        &none  &none  &none  &none  &none
-&none   &none   &none   &none     &none     &none       &none  &none  &none  &none  &none  &none
-&trans  &none   &none   &none     &none     &none       &none  &none  &none  &none  &none  &trans
-&trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2           &none  &none                        &trans
+&none   &none   &none   &none  &none                  &none  &none  &none  &none  &none
+&none   &none   &none   &none  &none  &none    &none  &none  &none  &none  &none  &none
+&trans  &none   &none   &none  &none  &none    &none  &none  &none  &none  &none  &trans
+&trans  &trans  &trans  &none  &none  &none           &none  &none                        &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
