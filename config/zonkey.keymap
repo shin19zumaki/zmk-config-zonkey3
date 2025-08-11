@@ -13,15 +13,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        MB2 {
-            bindings = <&mkp MB2>;
-            key-positions = <34 37>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
