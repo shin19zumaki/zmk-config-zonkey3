@@ -16,12 +16,23 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        msc_up_down: msc_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
             tap-ms = <20>;
+            label = "MSC_UP_DOWN";
+        };
+
+        mkp_1_2: mkp_1_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MKP_1_2";
+            bindings = <&mkp MB1>, <&mkp MB2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -39,10 +50,10 @@
 &kp Q                    &kp W             &kp E             &kp R     &kp T                                                        &kp Y          &kp U        &kp I      &kp O    &kp P
 &kp A                    &kp S             &kp D             &lt 5 F   &kp G        &kp LS(LC(LG(NUMBER_4)))    &kp RIGHT_BRACKET   &kp H          &lt 5 J      &kp K      &kp L    &kp MINUS
 &mt LEFT_CONTROL ESCAPE  &kp Z             &kp X             &kp C     &kp V        &kp B                       &lt 4 LEFT_BRACKET  &kp N          &kp M        &kp COMMA  &kp DOT  &mt RIGHT_CONTROL SLASH
-&kp LEFT_SHIFT           &mt LEFT_ALT F11  &mt LEFT_GUI F12  &mkp MB1  &lt 1 SPACE  &lt 2 TAB                                       &kp BACKSPACE  &lt 1 ENTER                                               &mt RIGHT_SHIFT BACKSLASH
+&kp LEFT_SHIFT           &mt LEFT_ALT F11  &mt LEFT_GUI F12  &mkp_1_2  &lt 1 SPACE  &lt 2 TAB                                       &kp BACKSPACE  &lt 1 ENTER                                               &mt RIGHT_SHIFT BACKSLASH
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+            sensor-bindings = <&msc_up_down>;
         };
 
         layer_1 {
@@ -59,7 +70,7 @@
 &kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW               &kp LANGUAGE_2  &kp LANGUAGE_1                                                                 &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&msc_up_down>;
         };
 
         layer_2 {
@@ -76,7 +87,7 @@
 &trans  &trans             &trans                    &none                     &none                 &none           &none  &none                                                           &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&msc_up_down>;
         };
 
         layer_3 {
@@ -87,7 +98,7 @@
 &trans  &trans  &trans  &none  &none  &none           &none  &none                        &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&msc_up_down>;
         };
 
         layer_4 {
@@ -98,7 +109,7 @@
 &trans             &trans        &trans        &none         &none         &none           &none  &kp LA(LC(HOME))                         &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&msc_up_down>;
         };
 
         SCROLL {
@@ -115,18 +126,18 @@
 &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2           &kp HOME  &kp END                        &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&msc_up_down>;
         };
 
-        layer_6 {
+        MOUSE {
             bindings = <
-&none   &none   &none   &none  &none                  &none  &none  &none  &none  &none
-&none   &none   &none   &none  &none  &none    &none  &none  &none  &none  &none  &none
-&trans  &none   &none   &none  &none  &none    &none  &none  &none  &none  &none  &trans
-&trans  &trans  &trans  &none  &none  &none           &none  &none                        &trans
+&none   &none   &none   &none   &none                    &none  &none  &none  &none  &none
+&none   &none   &none   &none   &none   &none     &none  &none  &none  &none  &none  &none
+&trans  &none   &none   &none   &none   &none     &none  &none  &none  &none  &none  &trans
+&trans  &trans  &trans  &trans  &trans  &trans           &none  &none                        &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&msc_up_down>;
         };
     };
 };
