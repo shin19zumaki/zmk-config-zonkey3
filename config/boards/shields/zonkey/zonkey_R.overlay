@@ -19,11 +19,9 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-    };
-};
 
-&trackball_listener {
-    input-processors = <&zip_temp_layer 6 10000>;
+        input-processors = <&zip_temp_layer 4 10000>;
+    };
 };
 
 &pinctrl {
