@@ -16,10 +16,10 @@
 };
 
 &zip_temp_layer {
+    require-prior-idle-ms = <200>;
     excluded-positions = <
         36 // GUI
         37 // MB1
-        38 // MB3
         39 // MB2
     >;
 };
