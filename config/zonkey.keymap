@@ -104,10 +104,10 @@
 
         MOUSE {
             bindings = <
-&none   &none   &none   &none     &none                     &none  &none  &none  &none  &none
-&none   &none   &none   &none     &none  &none       &none  &none  &none  &none  &none  &none
-&trans  &none   &none   &none     &none  &none       &none  &none  &none  &none  &none  &trans
-&trans  &trans  &trans  &mkp MB1  &none  &mkp MB2           &none  &none                        &trans
+&none   &none   &none   &none  &none                  &none  &none     &none     &none     &none
+&none   &none   &none   &none  &none  &none    &none  &none  &mkp MB1  &mkp MB2  &mkp MB3  &none
+&trans  &none   &none   &none  &none  &none    &none  &none  &none     &none     &none     &trans
+&trans  &trans  &trans  &none  &none  &none           &none  &none                                 &trans
             >;
 
             sensor-bindings = <&msc_up_down>;
@@ -121,10 +121,10 @@
             // | CTRL| WIN | ALT |HENKAN|SPACE|MUHENKAN|        | BS | ENT |                  | DEL |
 
             bindings = <
-&none   &none   &none   &none     &none                     &none     &none    &none  &none  &none
-&none   &none   &none   &none     &none  &none       &none  &none     &none    &none  &none  &none
-&trans  &none   &none   &none     &none  &none       &none  &none     &none    &none  &none  &trans
-&trans  &trans  &trans  &mkp MB1  &none  &mkp MB2           &kp HOME  &kp END                        &trans
+&none   &none   &none   &none  &none                  &none     &none    &none   &none   &none
+&none   &none   &none   &none  &none  &none    &none  &none     &trans   &trans  &trans  &none
+&trans  &none   &none   &none  &none  &none    &none  &none     &none    &none   &none   &trans
+&trans  &trans  &trans  &none  &none  &none           &kp HOME  &kp END                          &trans
             >;
 
             sensor-bindings = <&msc_up_down>;
