@@ -39,7 +39,11 @@
         layer_6to0: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mo 6>, <&macro_release>, <&to 0>;
+            bindings =
+                <&macro_release>,
+                <&to 6>,
+                <&macro_wait_time 200>,
+                <&to 0>;
 
             label = "NEW_MACRO";
         };
