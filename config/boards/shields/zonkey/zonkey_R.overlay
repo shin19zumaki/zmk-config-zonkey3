@@ -16,7 +16,7 @@
 };
 
 &zip_temp_layer {
-    require-prior-idle-ms = <200>;
+    require-prior-idle-ms = <800>;
     excluded-positions = <
         36 // GUI
         37 // MB1
