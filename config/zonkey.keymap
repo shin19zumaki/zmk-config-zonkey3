@@ -47,8 +47,8 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W             &kp E             &kp R           &kp T                                                       &kp Y          &kp U           &kp I      &kp O    &kp P
-&kp A             &kp S             &kp D             &lt_scroll 0 F  &kp G        &kp LS(LC(LG(NUMBER_4)))    &kp RIGHT_BRACKET  &kp H          &lt_scroll 0 J  &kp K      &kp L    &kp MINUS
+&kp Q             &kp W             &mt END E         &kp R           &kp T                                                       &kp Y          &kp U           &kp I      &kp O    &kp P
+&kp A             &kp S             &kp D             &lt_scroll 0 F  &kp G        &kp LS(LC(LG(NUMBER_4)))    &kp RIGHT_BRACKET  &mt HOME H     &lt_scroll 0 J  &kp K      &kp L    &kp MINUS
 &kp LEFT_CONTROL  &kp Z             &kp X             &kp C           &kp V        &kp B                       &kp LEFT_BRACKET   &kp N          &kp M           &kp COMMA  &kp DOT  &mt RIGHT_CONTROL SLASH
 &kp LEFT_SHIFT    &mt LEFT_ALT F11  &mt LEFT_GUI F12  &lt 4 ESCAPE    &lt 1 SPACE  &lt 2 TAB                                      &kp BACKSPACE  &lt 1 ENTER                                                  &mt RIGHT_SHIFT BACKSLASH
             >;
