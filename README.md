@@ -1,6 +1,7 @@
 # Zonkeyの概要
 
-Zonkeyは、分割キーボードを初めて使用する方も扱いやすいトラックボール・エンコーダー付きの無線キーボードです。<br>
+Zonkeyは、Goyakey氏が開発・販売しているトラックボール・エンコーダー付きの無線分割キーボードです。<br>
+<br>
 firmwareは「zmk firmware」のみ対応しています。<br>
 <br>
 左右でバッテリーの消耗が異なるため、Zonkeyは、左手側に300mAh、右手側に500mAhを搭載しています。<br>
@@ -33,6 +34,17 @@ Zonkeyは、PCやスマートフォン 等の様々な機器で使用されて�
 - レイヤー４・・・・・濃青
 - レイヤー５・・・・・紫
 - レイヤー６・・・・・薄青
+
+# zmk firmwareのカスタマイズ
+
+Auto Mouse Layerの設定を大幅に変更しています。<br>
+
+- zmk-pmw3610-driverからInput Processorへ変更
+- Auto Mouse Layerの有効時間を10秒に変更
+- 一部のキー（以下の19、20、21、36）以外の入力で元のレイヤーに戻る様に変更
+- キー入力後0.8秒間はAuto Mouse Layerが有効にならない様に変更
+
+<img width="820" height="300" alt="image" src="https://github.com/user-attachments/assets/424fcc57-cd0c-4448-b937-c6edc064e07e" />
 
 # トラブルシューティング
 
