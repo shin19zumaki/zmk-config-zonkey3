@@ -10,9 +10,9 @@
     combos { compatible = "zmk,combos"; };
 
     macros {
-        to_L0: to_layer_scroll {
+        to_L0: to_L0 {
             compatible = "zmk,behavior-macro-one-param";
-            label = "TO_LAYER_SCROLL";
+            label = "TO_L0";
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
