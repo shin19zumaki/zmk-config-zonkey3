@@ -41,7 +41,8 @@ Auto Mouse Layerの設定を大幅に変更しています。<br>
 
 - zmk-pmw3610-driverからInput Processorへ変更
 - Auto Mouse Layerの有効時間を10秒に変更
-- 一部のキー（以下の19、20、21、36）以外の入力で元のレイヤーに戻る様に変更
+- 一部のキー（以下の19、20、21、36）の入力で0.8秒後に元のレイヤーに戻る様に変更
+- 一部のキー（以下の19、20、21、36）以外の入力で直後に元のレイヤーに戻る様に変更
 - キー入力後0.8秒間はAuto Mouse Layerが有効にならない様に変更
 
 <img width="820" height="300" alt="image" src="https://github.com/user-attachments/assets/424fcc57-cd0c-4448-b937-c6edc064e07e" />
