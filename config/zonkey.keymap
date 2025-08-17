@@ -41,7 +41,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "KP2_JP";
             #binding-cells = <2>;
-            bindings = <&kp LANGUAGE_1 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT_ARROW &kp ENTER>;
+            bindings = <&kp LANGUAGE_1 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp ENTER &kp LEFT_ARROW>;
         };
     };
 
