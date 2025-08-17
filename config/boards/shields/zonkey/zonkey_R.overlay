@@ -20,7 +20,6 @@
         19 // K
         20 // L
         21 // -
-        36 // GUI
     >;
 
     require-prior-idle-ms = <800>;
