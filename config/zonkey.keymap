@@ -41,7 +41,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "KP2_JP";
             #binding-cells = <2>;
-            bindings = <&kp LANGUAGE_1 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT_ARROW>;
+            bindings = <&kp LANGUAGE_1 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT_ARROW &kp ENTER>;
         };
     };
 
@@ -64,23 +64,27 @@
             tapping-term-ms = <200>;
         };
 
-        td_en_test: td_en_test {
+        td_kp2_en: td_kp2_en {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_EN_TEST";
+            label = "TD_KP2_EN";
             #binding-cells = <0>;
             bindings =
                 <&kp2_en LEFT_PARENTHESIS RIGHT_PARENTHESIS>,
                 <&kp2_en LEFT_BRACKET RIGHT_BRACKET>,
                 <&kp2_en LEFT_BRACE RIGHT_BRACE>;
+
+            tapping-term-ms = <500>;
         };
 
-        tp_jp_test: tp_jp_test {
+        tp_kp2_jp: tp_kp2_jp {
             compatible = "zmk,behavior-tap-dance";
-            label = "TP_JP_TEST";
+            label = "TP_KP2_JP";
             #binding-cells = <0>;
             bindings =
                 <&kp2_jp LEFT_PARENTHESIS RIGHT_PARENTHESIS>,
                 <&kp2_jp LEFT_BRACKET RIGHT_BRACKET>;
+
+            tapping-term-ms = <500>;
         };
     };
 
@@ -111,10 +115,10 @@
 
         layer_2 {
             bindings = <
-&none             &none              &kp LS(LC(LG(NUMBER_3)))  &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_5))                        &none  &none  &none                   &none                    &none
-&none             &kp LA(LC(LG(S)))  &none                     &kp LA(LC(LG(F)))         &none                 &none    &tp_jp_test  &none  &none  &none                   &none                    &none
-&kp LEFT_CONTROL  &none              &none                     &kp LA(LC(LG(C)))         &none                 &none    &td_en_test  &none  &none  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(RIGHT_ARROW))  &kp RIGHT_CONTROL
-&kp LEFT_SHIFT    &kp LEFT_ALT       &kp LEFT_GUI              &none                     &none                 &none                 &none  &none                                                                      &kp RIGHT_SHIFT
+&none             &none              &kp LS(LC(LG(NUMBER_3)))  &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_5))                       &none  &none  &none                   &none                    &none
+&none             &kp LA(LC(LG(S)))  &none                     &kp LA(LC(LG(F)))         &none                 &none    &tp_kp2_jp  &none  &none  &none                   &none                    &none
+&kp LEFT_CONTROL  &none              &none                     &kp LA(LC(LG(C)))         &none                 &none    &td_kp2_en  &none  &none  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(RIGHT_ARROW))  &kp RIGHT_CONTROL
+&kp LEFT_SHIFT    &kp LEFT_ALT       &kp LEFT_GUI              &none                     &none                 &none                &none  &none                                                                      &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&msc_up_down>;
@@ -144,10 +148,10 @@
 
         MOUSE {
             bindings = <
-&none             &none         &none         &none     &none                        &none  &none  &none     &none     &none
-&none             &none         &none         &none     &none     &none       &none  &none  &none  &mkp MB1  &mkp MB2  &mkp MB3
-&kp LEFT_CONTROL  &none         &none         &none     &none     &none       &none  &none  &none  &none     &none     &kp RIGHT_CONTROL
-&kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &mkp MB1  &mkp MB2  &mkp MB3           &none  &none                                         &kp RIGHT_SHIFT
+&none             &none         &none         &none  &none                  &none  &none  &none     &none     &none
+&none             &none         &none         &none  &none  &none    &none  &none  &none  &mkp MB1  &mkp MB2  &mkp MB3
+&kp LEFT_CONTROL  &none         &none         &none  &none  &none    &none  &none  &none  &none     &none     &kp RIGHT_CONTROL
+&kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &none  &none  &none           &none  &none                                         &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&msc_up_down>;
@@ -155,10 +159,10 @@
 
         SCROLL {
             bindings = <
-&none             &none         &none         &none     &none                        &none  &none  &none     &none     &none
-&none             &none         &none         &none     &none     &none       &none  &none  &none  &mkp MB1  &mkp MB2  &mkp MB3
-&kp LEFT_CONTROL  &none         &none         &none     &none     &none       &none  &none  &none  &none     &none     &kp LEFT_CONTROL
-&kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &mkp MB1  &mkp MB2  &mkp MB3           &none  &none                                        &kp RIGHT_SHIFT
+&none             &none         &none         &none  &none                  &none  &none  &none     &none     &none
+&none             &none         &none         &none  &none  &none    &none  &none  &none  &mkp MB1  &mkp MB2  &mkp MB3
+&kp LEFT_CONTROL  &none         &none         &none  &none  &none    &none  &none  &none  &none     &none     &kp LEFT_CONTROL
+&kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &none  &none  &none           &none  &none                                        &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&msc_up_down>;
