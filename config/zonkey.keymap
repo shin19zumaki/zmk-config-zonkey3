@@ -98,7 +98,7 @@
 &kp Q             &kp W             &mt END E         &kp R          &kp T                                                       &kp Y          &kp U          &kp I      &kp O    &kp P
 &kp A             &kp S             &kp D             &lt_to_L0 6 F  &kp G        &kp LS(LC(LG(NUMBER_4)))    &kp RIGHT_BRACKET  &mt HOME H     &lt_to_L0 6 J  &kp K      &kp L    &kp MINUS
 &kp LEFT_CONTROL  &kp Z             &kp X             &kp C          &kp V        &kp B                       &kp LEFT_BRACKET   &kp N          &kp M          &kp COMMA  &kp DOT  &mt RIGHT_CONTROL SLASH
-&kp LEFT_SHIFT    &mt LEFT_ALT F11  &mt LEFT_GUI F12  &lt 4 ESCAPE   &lt 1 SPACE  &lt 2 TAB                                      &kp BACKSPACE  &lt 1 ENTER                                                 &mt RIGHT_SHIFT BACKSLASH
+&kp LEFT_SHIFT    &mt LEFT_ALT F11  &mt LEFT_GUI F12  &lt 4 ESCAPE   &lt 1 SPACE  &lt 2 TAB                                      &kp BACKSPACE  &lt 1 ENTER                                                 &mt RIGHT_SHIFT EQUAL
             >;
 
             sensor-bindings = <&msc_up_down>;
@@ -106,21 +106,21 @@
 
         layer_1 {
             bindings = <
-&kp N1            &kp N2        &kp N3        &kp N4          &kp N5                                        &kp N6          &kp N7          &kp N8            &kp N9                &kp N0
-&kp EXCLAMATION   &kp AT_SIGN   &kp HASH      &kp DOLLAR      &kp PERCENT     &none              &kp PLUS   &kp CARET       &kp AMPERSAND   &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp LEFT_CONTROL  &kp GRAVE     &kp TILDE     &none           &none           &kp UP_ARROW       &kp EQUAL  &kp SEMICOLON   &kp COLON       &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES     &kp RIGHT_CONTROL
-&kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW               &kp LANGUAGE_2  &kp LANGUAGE_1                                                                 &kp RIGHT_SHIFT
+&kp N1            &kp N2        &kp N3        &kp N4          &kp N5                                         &kp N6          &kp N7          &kp N8            &kp N9                &kp N0
+&kp EXCLAMATION   &kp AT_SIGN   &kp HASH      &kp DOLLAR      &kp PERCENT     &none              &tp_kp2_jp  &kp CARET       &kp AMPERSAND   &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp LEFT_CONTROL  &kp GRAVE     &kp TILDE     &kp BACKSLASH   &kp PIPE        &kp UP_ARROW       &td_kp2_en  &kp SEMICOLON   &kp COLON       &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES     &kp RIGHT_CONTROL
+&kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW                &kp LANGUAGE_2  &kp LANGUAGE_1                                                                 &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&msc_up_down>;
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
         };
 
         layer_2 {
             bindings = <
-&none             &none              &kp LS(LC(LG(NUMBER_3)))  &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_5))                       &none  &none  &none                   &none                    &none
-&none             &kp LA(LC(LG(S)))  &none                     &kp LA(LC(LG(F)))         &none                 &none    &tp_kp2_jp  &none  &none  &none                   &none                    &none
-&kp LEFT_CONTROL  &none              &none                     &kp LA(LC(LG(C)))         &none                 &none    &td_kp2_en  &none  &none  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(RIGHT_ARROW))  &kp RIGHT_CONTROL
-&kp LEFT_SHIFT    &kp LEFT_ALT       &kp LEFT_GUI              &none                     &none                 &none                &none  &none                                                                      &kp RIGHT_SHIFT
+&none             &none              &kp LS(LC(LG(NUMBER_3)))  &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_5))                  &none  &none  &none                   &none                    &none
+&none             &kp LA(LC(LG(S)))  &none                     &kp LA(LC(LG(F)))         &none                 &none    &none  &none  &none  &none                   &none                    &none
+&kp LEFT_CONTROL  &none              &none                     &kp LA(LC(LG(C)))         &none                 &none    &none  &none  &none  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(RIGHT_ARROW))  &kp RIGHT_CONTROL
+&kp LEFT_SHIFT    &kp LEFT_ALT       &kp LEFT_GUI              &none                     &none                 &none           &none  &none                                                                      &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&msc_up_down>;
@@ -150,10 +150,10 @@
 
         MOUSE {
             bindings = <
-&none             &none         &none         &none  &none                  &none  &none  &none     &none     &none
-&none             &none         &none         &none  &none  &none    &none  &none  &none  &mkp MB1  &mkp MB2  &mkp MB3
-&kp LEFT_CONTROL  &none         &none         &none  &none  &none    &none  &none  &none  &none     &none     &kp RIGHT_CONTROL
-&kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &none  &none  &none           &none  &none                                         &kp RIGHT_SHIFT
+&none  &none  &none  &none  &none                  &none  &none  &none     &none     &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &mkp MB1  &mkp MB2  &mkp MB3
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none     &none     &none
+&none  &none  &none  &none  &none  &none           &none  &none                                &none
             >;
 
             sensor-bindings = <&msc_up_down>;
