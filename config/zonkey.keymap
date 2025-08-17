@@ -107,12 +107,12 @@
         layer_1 {
             bindings = <
 &kp N1            &kp N2        &kp N3        &kp N4          &kp N5                                         &kp N6          &kp N7          &kp N8            &kp N9                &kp N0
-&kp EXCLAMATION   &kp AT_SIGN   &kp HASH      &kp DOLLAR      &kp PERCENT     &kp LG(O)          &tp_kp2_jp  &kp CARET       &kp AMPERSAND   &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp EXCLAMATION   &kp AT_SIGN   &kp HASH      &kp DOLLAR      &kp PERCENT     &none              &tp_kp2_jp  &kp CARET       &kp AMPERSAND   &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp LEFT_CONTROL  &kp GRAVE     &kp TILDE     &kp BACKSLASH   &kp PIPE        &kp UP_ARROW       &td_kp2_en  &kp SEMICOLON   &kp COLON       &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES     &kp RIGHT_CONTROL
 &kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW                &kp LANGUAGE_2  &kp LANGUAGE_1                                                                 &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(PLUS) LG(MINUS)>;
+            sensor-bindings = <&msc_up_down>;
         };
 
         layer_2 {
