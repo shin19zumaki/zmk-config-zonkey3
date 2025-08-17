@@ -71,7 +71,8 @@
             bindings =
                 <&kp2_en LEFT_PARENTHESIS RIGHT_PARENTHESIS>,
                 <&kp2_en LEFT_BRACKET RIGHT_BRACKET>,
-                <&kp2_en LEFT_BRACE RIGHT_BRACE>;
+                <&kp2_en LEFT_BRACE RIGHT_BRACE>,
+                <&none>;
 
             tapping-term-ms = <500>;
         };
@@ -82,7 +83,8 @@
             #binding-cells = <0>;
             bindings =
                 <&kp2_jp LEFT_PARENTHESIS RIGHT_PARENTHESIS>,
-                <&kp2_jp LEFT_BRACKET RIGHT_BRACKET>;
+                <&kp2_jp LEFT_BRACKET RIGHT_BRACKET>,
+                <&none>;
 
             tapping-term-ms = <500>;
         };
