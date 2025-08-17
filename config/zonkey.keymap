@@ -30,18 +30,18 @@
                 <&to 0>;
         };
 
-        kp2_en: kt_en {
+        kp2_en: kp2_en {
             compatible = "zmk,behavior-macro-two-param";
+            label = "KP2_EN";
             #binding-cells = <2>;
             bindings = <&kp LANGUAGE_2 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT_ARROW>;
-            label = "KT_EN";
         };
 
         kp2_jp: kp2_jp {
             compatible = "zmk,behavior-macro-two-param";
+            label = "KP2_JP";
             #binding-cells = <2>;
             bindings = <&kp LANGUAGE_1 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT_ARROW>;
-            label = "KP2_JP";
         };
     };
 
