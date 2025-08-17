@@ -112,7 +112,7 @@
 &kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW                &kp LANGUAGE_2  &kp LANGUAGE_1                                                                 &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&msc_up_down>;
+            sensor-bindings = <&inc_dec_kp EQUAL MINUS>;
         };
 
         layer_2 {
