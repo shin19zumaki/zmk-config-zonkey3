@@ -29,20 +29,6 @@
                 <&macro_pause_for_release>,
                 <&to 0>;
         };
-
-        kp2_en: kp2_en {
-            compatible = "zmk,behavior-macro-two-param";
-            label = "KP2_EN";
-            #binding-cells = <2>;
-            bindings = <&kp LANGUAGE_2 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT_ARROW>;
-        };
-
-        kp2_jp: kp2_jp {
-            compatible = "zmk,behavior-macro-two-param";
-            label = "KP2_JP";
-            #binding-cells = <2>;
-            bindings = <&kp LANGUAGE_1 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp ENTER &kp LEFT_ARROW>;
-        };
     };
 
     behaviors {
@@ -64,29 +50,13 @@
             tapping-term-ms = <200>;
         };
 
-        td_kp2_en: td_kp2_en {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_KP2_EN";
-            #binding-cells = <0>;
-            bindings =
-                <&kp2_en LEFT_PARENTHESIS RIGHT_PARENTHESIS>,
-                <&kp2_en LEFT_BRACKET RIGHT_BRACKET>,
-                <&kp2_en LEFT_BRACE RIGHT_BRACE>,
-                <&none>;
+        zoom_in_out: zoom_in_out {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ZOOM_IN_OUT";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LG(PLUS)>, <&kp LG(MINUS)>;
 
-            tapping-term-ms = <500>;
-        };
-
-        tp_kp2_jp: tp_kp2_jp {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TP_KP2_JP";
-            #binding-cells = <0>;
-            bindings =
-                <&kp2_jp LEFT_PARENTHESIS RIGHT_PARENTHESIS>,
-                <&kp2_jp LEFT_BRACKET RIGHT_BRACKET>,
-                <&none>;
-
-            tapping-term-ms = <500>;
+            tap-ms = <20>;
         };
     };
 
@@ -106,13 +76,13 @@
 
         layer_1 {
             bindings = <
-&kp N1            &kp N2        &kp N3        &kp N4          &kp N5                                         &kp N6          &kp N7          &kp N8            &kp N9                &kp N0
-&kp EXCLAMATION   &kp AT_SIGN   &kp HASH      &kp DOLLAR      &kp PERCENT     &none              &tp_kp2_jp  &kp CARET       &kp AMPERSAND   &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp LEFT_CONTROL  &kp GRAVE     &kp TILDE     &kp BACKSLASH   &kp PIPE        &kp UP_ARROW       &td_kp2_en  &kp SEMICOLON   &kp COLON       &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES     &kp RIGHT_CONTROL
-&kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW                &kp LANGUAGE_2  &kp LANGUAGE_1                                                                 &kp RIGHT_SHIFT
+&kp N1            &kp N2        &kp N3        &kp N4          &kp N5                                     &kp N6          &kp N7          &kp N8            &kp N9                &kp N0
+&kp EXCLAMATION   &kp AT_SIGN   &kp HASH      &kp DOLLAR      &kp PERCENT     &kp LG(NUMBER_0)    &none  &kp CARET       &kp AMPERSAND   &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp LEFT_CONTROL  &kp GRAVE     &kp TILDE     &kp BACKSLASH   &kp PIPE        &kp UP_ARROW        &none  &kp SEMICOLON   &kp COLON       &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES     &kp RIGHT_CONTROL
+&kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW            &kp LANGUAGE_2  &kp LANGUAGE_1                                                                 &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&msc_up_down>;
+            sensor-bindings = <&zoom_in_out>;
         };
 
         layer_2 {
