@@ -32,24 +32,6 @@
     };
 
     behaviors {
-        cpi_up: cpi_up {
-            compatible = "zmk,behavior-pmw3610-cpi";
-            mode = <1>;
-            value = <200>;
-        };
-
-        cpi_down: cpi_down {
-            compatible = "zmk,behavior-pmw3610-cpi";
-            mode = <-1>;
-            value = <200>;
-        };
-
-        cpi_set_1200: cpi_set_1200 {
-            compatible = "zmk,behavior-pmw3610-cpi";
-            mode = <0>;
-            value = <1200>;
-        };
-
         msc_up_down: msc_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             label = "MSC_UP_DOWN";
