@@ -6,8 +6,6 @@ manifest:
       url-base: https://github.com/kureyakey
     - name: caksoylar
       url-base: https://github.com/caksoylar
-    - name: shin19zumaki
-      url-base: https://github.com/shin19zumaki
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -18,9 +16,6 @@ manifest:
       revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: main
-    - name: zmk-pmw3610-cpi
-      remote: shin19zumaki
       revision: main
   self:
     path: config
